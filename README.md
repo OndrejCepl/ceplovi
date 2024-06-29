@@ -1,9 +1,10 @@
 # Ceplovi
+Personal webpage - Ceplovi family. 
 
-## subheader
+## 2024 new design
+There is going to be new design, features and purpose. 
 
-I made some changes
+## Development
 
-## Local development
-
-Here are some local changes
+# 29.6.2024
+“*” Sketch and layout design
