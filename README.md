@@ -8,9 +8,9 @@ There is going to be new design, features and purpose.
 
 # 29.6.2024
 * Sketch and layout design
-<<<<<<< HEAD
 
 # 30.6.2024
-*
-=======
->>>>>>> c05e11d71f48f9a0db0485c5b823a1c78268465a
+* New bootstrap link
+* 
+* Favicon
+* 
