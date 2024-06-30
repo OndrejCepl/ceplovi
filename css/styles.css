@@ -1,0 +1,28 @@
+/* Custom styles */
+body {
+    /* padding-top: 36px; Adjust for fixed navba height */
+    margin: 56px;
+}
+/* ====== Navbar ===== */
+.navbar-toggler {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    z-index: 1050; /* Ensure it stays on top */
+}
+
+/* Navbar search */
+/* collapse by default */
+.collapse {
+    display: none;
+}
+
+.collapse.show {
+    display: flex;
+}
+
+@media (min-width: 992px) {
+    .navbar-toggler {
+        display: none; /* Hide toggler on desktop */
+    }
+}
