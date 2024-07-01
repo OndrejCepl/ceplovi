@@ -26,3 +26,10 @@ body {
         display: none; /* Hide toggler on desktop */
     }
 }
+
+/* Medium devices (tablets, less than 992px)
+@media (max-width: 991.98px) {
+    header nav .d-flex.align-items-center.position-relative {
+
+    }   
+} */
