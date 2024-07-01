@@ -11,6 +11,8 @@ There is going to be new design, features and purpose.
 
 # 30.6.2024
 * New bootstrap link
-* 
+* File included custom styles styles.css
 * Favicon
-* 
+
+# 1.7.2024
+* Responsive toggler bar
