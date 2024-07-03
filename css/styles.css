@@ -5,14 +5,15 @@ body {
 }
 /* ====== Navbar ===== */
 .navbar {
-    transition: opacity 0.5s ease-in-out;
+    /* transition: opacity 0.5s ease-in-out; */
+    transition: opacity 0.5s ease;
 }
 
 .navbar-toggler {
     position: fixed;
     top: 10px;
     right: 10px;
-    /* z-index: 1050; Ensure it stays on top */
+    /* z-index: 1050;  Ensure it stays on top */
 }
 
 /* Position the toggler and search button */
