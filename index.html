@@ -11,50 +11,43 @@
 		<link rel="stylesheet" href="css/styles.css">
 	</head>
 	<body>
-		<header id="header">
+		<header id="header" class="fixed-top">
 			<!-- Navbar -->
 			<nav class="navbar navbar-expand-lg navbar-dark border-bottom bg-dark fixed-top">
-				<!-- Full width container - adapts to the screen size -->
-				<div class="container-fluid d-flex justify-content-center">
+				<span class="container-fluid d-flex justify-content-center">
 					<!-- Title of the page -->
 					<img src="/images/navbar/heart-icon.png" alt="Logo" width="30" height="24" class="d-inline-block align-text-top justify-content-start">
-					<!-- clicable text -->
-					<a class="navbar-brand " href="#">Čeplovi</a>
-					<!-- Toggler button - activate offcanvas component, when clicked
-						links the button to the offcanvas element with the given ID -->
-					<div class="fixed-button">
-						<button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-
-						<button class="btn btn-outline-light d-flex align-items-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-expanded="false" aria-controls="navbarSearch">
-							<!-- icon in a button -->
-							<i class="bi bi-search align-items-end"></i>
-					</div>
+					<!-- clickable text -->
+					<a class="navbar-brand" href="#">Čeplovi</a>
 					
+					<!-- Search button -->
+					<div class="position-relative me-3">
+						<button class="btn btn-outline-light d-flex align-items-start" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSearch" aria-expanded="false" aria-controls="navbarSearch">
+							<i class="bi bi-search align-items-end"></i>
+						</button>
+						<div class="collapse" id="navbarSearch">
+							<form class="d-flex ms-3" role="search">
+								<input class="form-control me-2" type="search" placeholder="Search" aria-label="SearchLabel">
+								<button class="btn btn-success" type="submit">Search</button>
+							</form>
+						</div>
+					</div>
+
+		
 					<!-- Offcanvas navigation -->
 					<div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
-						<!-- container for the offcanvas header -->
 						<div class="offcanvas-header">
-							<!-- title of the offcanvas -->
 							<h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Čeplovi</h5>
-							<!-- a white close button to dismiss the offcanvas -->
 							<button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
 						</div>
-						<!-- Container for the main content of the offcanvas -->
 						<div class="offcanvas-body">
-							<!-- Navigation menu
-								alignment and padding -->
 							<ul class="navbar-nav justify-content-center flex-grow-1 pe-3 d-flex gap-lg-4">
-								<!-- home -->
 								<li class="nav-item text-center">
 									<a class="nav-link active" aria-current="page" href="#">Domů</a>
 								</li>
-								<!-- #1 -->
 								<li class="nav-item">
 									<a class="nav-link" href="#">Svatba</a>
 								</li>
-								<!-- #2 -->
 								<li class="nav-item">
 									<a class="nav-link" href="#">Julinka</a>
 								</li>
@@ -62,19 +55,16 @@
 									<a class="nav-link" href="#">Ondra projekt</a>
 								</li>
 							</ul>
-							<!-- Search button -->
-							<div class="d-flex align-items-center position-relative">
-								<div class="collapse" id="navbarSearch">
-									<!-- collect user input -->
-									<form class="d-flex ms-3" role="search">
-										<input class="form-control me-2" type="search" placeholder="Search" aria-label="SearchLabel">
-										<button class="btn btn-success" type="submit">Search</button>
-									</form>
-								</div>
-							</div>
 						</div>
 					</div>
-				</div>
+				</span>
+									<!-- toggle button -->
+					<!-- activate offcanvas component, when clicked links the button to the offcanvas element with the given ID -->
+				<span class="navbar-toggler-container">
+					<button class="navbar-toggler navbar-toggler-fixed d-flex align-items-end" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar" aria-label="Toggle navigation">
+						<span class="navbar-toggler-icon"></span>
+					</button>
+				</span>
 			</nav>
 		</header>
 		<div class="content">

@@ -3,34 +3,41 @@ body {
     /* padding-top: 36px; Adjust for fixed navba height */
     margin: 56px;
 }
+
+#header {
+    width: 100%;
+    height: auto;
+}
 /* ====== Navbar ===== */
 .navbar {
     /* transition: opacity 0.5s ease-in-out; */
-    transition: opacity 0.5s ease;
+    transition: opacity 1s ease;
 }
 
-.navbar-toggler {
+/* .navbar-toggler {
     position: fixed;
+    height: auto;
     top: 10px;
-    right: 10px;
-    /* z-index: 1050;  Ensure it stays on top */
+    right: 10px; */
+    /* cursor: pointer; */
+    /* z-index: 1050;   Ensure it stays on top */
+.position-relative {
+    position: relative;
 }
 
-/* Position the toggler and search button */
-.fixed-buttons {
+/* Style the toggler container separately */
+.navbar-toggler-container {
     position: fixed;
     top: 10px; /* Adjust as needed */
     right: 10px; /* Adjust as needed */
-    z-index: 1050; /* Ensure they are on top */
-    display: flex;
-    gap: 10px;
+    z-index: 1050;
+    transition: opacity 0.3s ease;
 }
-
 /* Make sure toggler button and search button are visible */
-.fixed-buttons .navbar-toggler,
+/* .fixed-buttons .navbar-toggler,
 .fixed-buttons .btn-outline-light {
     display: none;
-}
+} */
 
 /* Navbar search */
 /* collapse by default */
