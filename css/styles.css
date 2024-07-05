@@ -11,33 +11,64 @@ body {
 /* ====== Navbar ===== */
 .navbar {
     /* transition: opacity 0.5s ease-in-out; */
-    transition: opacity 1s ease;
+    /* display: flex; */
+    align-items: center;
+
 }
 
-/* .navbar-toggler {
+.navbar-right {
+    /* display: flex; */
+    align-items: center;
     position: fixed;
-    height: auto;
-    top: 10px;
-    right: 10px; */
-    /* cursor: pointer; */
-    /* z-index: 1050;   Ensure it stays on top */
-.position-relative {
-    position: relative;
-}
-
-/* Style the toggler container separately */
-.navbar-toggler-container {
-    position: fixed;
-    top: 10px; /* Adjust as needed */
+    top: 00px; /* Adjust as needed */
     right: 10px; /* Adjust as needed */
+    transition: 0 ;
     z-index: 1050;
-    transition: opacity 0.3s ease;
+    opacity: 1;
+    padding: 0.5rem 0.5rem;
+    /* width: 56px;
+    height: 40px; */
+
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding: 0.5rem 0.5rem;
+
 }
-/* Make sure toggler button and search button are visible */
-/* .fixed-buttons .navbar-toggler,
-.fixed-buttons .btn-outline-light {
-    display: none;
-} */
+
+.navbar-toggler {
+    padding: 0.25rem 0.25rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: 0.25rem;
+}
+/* remove border of search button */
+.btn-outline-light {
+    --bs-btn-border-color: transparent;
+}
+
+
+.navbar-left {
+    display: flex;
+    transition: opacity 0.5s ease-in-out;
+}
+
+.bg-dark {
+    transition: opacity 0.5s ease-in-out;
+}
+.navbar-toggler-icon {
+    background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="black" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
+}
 
 /* Navbar search */
 /* collapse by default */
@@ -50,10 +81,6 @@ body {
 }
 
 @media (min-width: 992px) {
-    .navbar-toggler {
-        display: none; /* Hide toggler on desktop */
-    }
-
     .fixed-buttons .btn-outline-light {
         display: block;
     }
