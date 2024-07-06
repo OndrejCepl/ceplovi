@@ -55,7 +55,27 @@
 			Jedná se o testovací stránku <br>
 			Test --> super funguje to 
 		</div>
+		<div id="footer-container"></div>
 		<!-- ========= Load page sections ========= -->
+		<script>
+			// Load header.html into the header-container div
+			document.addEventListener('DOMContentLoaded', () => {
+				// header
+            fetch('/sections/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+				});
+				//footer
+			fetch('/sections/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+				});
+			});
+		</script>
+
+		<!-- Header -->
 		<script>
 			// Load header.html into the header-container div
 			document.addEventListener('DOMContentLoaded', () => {
