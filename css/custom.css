@@ -1,8 +1,9 @@
 /* Custom styles */
 body {
     /* padding-top: 36px; Adjust for fixed navba height */
-    margin: 56px;
+    margin-top: 56px;
     background-color: gray;
+    margin-bottom: 0.5em;
 }
 
 #header {
@@ -86,6 +87,15 @@ footer .row a {
     color: black;
 }
 
+footer .row{
+    padding-left: 5%; 
+    padding-right: 5%;
+}
+
+footer hr {
+    margin-bottom: 0.25em;
+}
+
 /* Navbar search */
 /* collapse by default */
 .collapse {
@@ -95,6 +105,16 @@ footer .row a {
 .collapse.show {
     display: flex;
 }
+
+.jumbotron {
+    background-image: url(/images/body/L+O-30.jpg);
+    background-size: cover;
+    height: 100vh; /* Full viewport height */
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
 
 @media (min-width: 992px) {
     .fixed-buttons .btn-outline-light {
