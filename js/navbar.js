@@ -1,48 +1,36 @@
+
 window.addEventListener('scroll', function() {
     /* transition of the navbar */
-    // const navbar = document.querySelector('.navbar');
-    const navbar = document.querySelectorAll('.navbar, .navbar *');
-    const navbarRight = document.querySelector('div.navbar-rigth.navbar-toggler-container');
-    const buttonBackground = document.querySelector('.bg-dark');
-    // Filter out elements that are .navbar-right or any of its descendants
-    const navbarElements = Array.from(navbar).filter(element => {
-        return !element.matches('div.navbar-rigth.navbar-toggler-container') && !element.closest('.div.navbar-rigth.navbar-toggler-container');
+    const navbar = document.querySelector('.navbar');
+    if (!navbar) return; // Ensure the navbar exists
+    // const navbar = document.querySelectorAll('.navbar, .navbar *');
+    // const navbarElements = Array.from(navbar);
+    const navbarID = document.getElementById('navbar-id');
+    const pageTitleID = document.getElementById('page-title-id');
+    // const opaqueHeight = 100; // Adjust this height as needed
     
-    });
-    if (!navbar) return; // Ensure the navbar exists c
     const scrollTop = window.scrollY || document.documentElement.scrollTop;
     const fadeStart = 50; // Start fading out the navbar
-    const fadeUntil = 150; // Fully faded out
+    const fadeUntil = 350; // Fully faded out
 
     if (scrollTop <= fadeStart) {
-        navbarElements.forEach(element => {
-            element.style.opacity = '1';
-        });
-        navbarRight.style.opacity = '1';
-        buttonBackground.style.opacity = '1';
+        navbarID.style.setProperty('background-color', 'rgba(33,37,41, 1)', 'important');
+        pageTitleID.style.setProperty('opacity', '1'); 
     } else if (scrollTop >= fadeUntil) {
-        navbarElements.forEach(element => {
-            element.style.opacity = '0';
-        });
-        
-        buttonBackground.style.opacity = '0';
+        navbarID.style.setProperty('background-color', 'rgba(33,37,41, 0)', 'important');
         navbar.classList.remove('navbar-expand-lg');
-        navbar.classList.remove('bg-dark')
+        pageTitleID.style.opacity = '0'; 
     } else {
         const opacity = 1 - (scrollTop - fadeStart) / (fadeUntil - fadeStart);
-        navbarElements.forEach(element => {
-            element.style.opacity = `${opacity}`;
-        });
-        buttonBackground.style.opacity = `${opacity}`;
-        navbarRight.style.opacity = '1';
-        // navbar-toggler.style.opacity = '1';
+        navbarID.style.setProperty('background-color', `rgba(33, 37, 41, ${opacity})`, 'important');
+        pageTitleID.style.opacity = opacity.toString(); 
     }
 
     if (scrollTop <= fadeUntil + 10) {
         navbar.classList.add('navbar-expand-lg');
     }
-
 });
+
 /* calculate padding of the toggler button div */ 
 document.addEventListener("DOMContentLoaded", function() {
     const navbarLeft = document.querySelector('.navbar-left');
@@ -63,8 +51,3 @@ document.addEventListener("DOMContentLoaded", function() {
     // Adjust padding on window resize
     window.addEventListener('resize', adjustPadding);
 });
-
-/*
-const navbarHeight = document.querySelector('.navbar').offsetHeight;
-document.getElementById('header').style.height = `${navbarHeight}px`;
-*/
