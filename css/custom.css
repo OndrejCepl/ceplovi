@@ -3,14 +3,13 @@ body {
     /* padding-top: 36px; Adjust for fixed navba height */
     margin-top: 56px;
     background-color: gray;
-    margin-bottom: 0.5em;
 }
-
+/* ====== Header ===== */
 #header {
     width: 100%;
     height: auto;
 }
-/* ====== Navbar ===== */
+
 .navbar {
     /* transition: opacity 0.5s ease-in-out; */
     /* display: flex; */
@@ -82,20 +81,6 @@ body {
     background-image: url('data:image/svg+xml;charset=utf8,%3Csvg viewBox="0 0 30 30" xmlns="http://www.w3.org/2000/svg"%3E%3Cpath stroke="rgb(144, 12, 63)" stroke-width="2" stroke-linecap="round" stroke-miterlimit="10" d="M4 7h22M4 15h22M4 23h22"/%3E%3C/svg%3E');
 }
 
-/* footer */
-footer .row a {
-    color: black;
-}
-
-footer .row{
-    padding-left: 5%; 
-    padding-right: 5%;
-}
-
-footer hr {
-    margin-bottom: 0.25em;
-}
-
 /* Navbar search */
 /* collapse by default */
 .collapse {
@@ -105,7 +90,30 @@ footer hr {
 .collapse.show {
     display: flex;
 }
+/* ====== Header end ===== */
+/* ====== Footer ===== */
+footer {
+    background-color: #212529;
+    color: #FFFFFFAC;
+    padding-top: 0.5em;
+    padding-bottom: 0.5em;
+    margin-top: 1em;
+}
+footer .row a {
+    color: #FFFFFFAC;
+}
 
+footer .row{
+    padding-left: 5%; 
+    padding-right: 5%;
+}
+
+/* footer hr {
+    padding-bottom: 0.25em;
+} */
+/* ====== Footer end ===== */
+
+/* ====== Body ===== */
 .jumbotron {
     background-image: url(/images/body/L+O-30.jpg);
     background-size: cover;
@@ -113,16 +121,32 @@ footer hr {
     color: white;
     position: relative;
     overflow: hidden;
+    background-position:  center top;
+
 }
 
+.content {
+    padding: 3em 3em 0 3em;
+}
+/* ====== Body end ===== */
 
+/* *********** MEDIA ********** */
 @media (min-width: 992px) {
+    /* ====== Header ===== */
     .fixed-buttons .btn-outline-light {
         display: block;
     }
+    /* ====== Header end ===== */
 }
 
 @media (max-width: 991.98px) {
+    /* ====== Body ===== */
+    body {
+        margin-top: 46px;
+    }
+
+    /* ====== Body end ===== */
+    /* ====== Header ===== */
     .fixed-buttons .navbar-toggler {
         display: block;
     }
@@ -130,5 +154,6 @@ footer hr {
     #navbar-right-div {
         padding-top: 0.2em;
     }
+    /* ====== Header end ===== */
 }
 
