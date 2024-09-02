@@ -3,4 +3,4 @@ AuthGroupFile /dev/null
 AuthType Basic
 AuthName "Restricted Area"
 Require valid-user
-Order deny,allow
+Order Deny, Allow
