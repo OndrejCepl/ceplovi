@@ -31,23 +31,24 @@ window.addEventListener('scroll', function() {
     }
 });
 
-/* calculate padding of the toggler button div */ 
-document.addEventListener("DOMContentLoaded", function() {
-    const navbarLeft = document.querySelector('.navbar-left');
-    const navbarRight = document.querySelector('.navbar-right');
+// /* calculate padding of the toggler button div */ 
+// document.addEventListener("DOMContentLoaded", function() {
+//     const navbarLeft = document.querySelector('.navbar-left');
+//     const navbarRight = document.querySelector('.navbar-right');
 
-    function adjustPadding() {
-        // calculate width of the right box
-        const navbarRightWidth = navbarRight.offsetWidth;
-        // calculate left padding
-        const navbarLeftComputedStyle = window.getComputedStyle(navbarLeft);
-        const navbarLeftPaddingLeft = parseFloat(navbarLeftComputedStyle.paddingLeft);
-        navbarLeft.style.paddingRight = `${navbarRightWidth + navbarLeftPaddingLeft}px`;
-    }
+//     function adjustPadding() {
+//         // calculate width of the right box
+//         const navbarRightWidth = navbarRight.offsetWidth;
+//         // const navbarRightWidth = 5;
+//         // calculate left padding
+//         const navbarLeftComputedStyle = window.getComputedStyle(navbarLeft);
+//         const navbarLeftPaddingLeft = parseFloat(navbarLeftComputedStyle.paddingLeft);
+//         navbarLeft.style.paddingRight = `${navbarRightWidth + navbarLeftPaddingLeft}px`;
+//     }
 
-    // Adjust padding initially
-    adjustPadding();
+//     // Adjust padding initially
+//     adjustPadding();
 
-    // Adjust padding on window resize
-    window.addEventListener('resize', adjustPadding);
-});
+//     // Adjust padding on window resize
+//     window.addEventListener('resize', adjustPadding);
+// });

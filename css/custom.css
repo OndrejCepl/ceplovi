@@ -2,7 +2,19 @@
 body {
     /* padding-top: 36px; Adjust for fixed navba height */
     margin-top: 56px;
-    background-color: gray;
+    background-color: #121212;
+    color: whitesmoke;
+}
+#vtipy {
+    text-align: center;
+    align-items: center;
+    position: relative;
+    columns: 1;
+    max-width: 500px;
+    min-width: 200px;
+    margin: auto;
+    word-wrap: break-word;
+    
 }
 /* ====== Header ===== */
 #header {
