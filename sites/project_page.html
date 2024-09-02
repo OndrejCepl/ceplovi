@@ -23,6 +23,21 @@
                 .then(response => response.text())
                 .then(data => {
                     document.getElementById('header-container').innerHTML = data;
+
+                    /* Highlight the active section */
+                    const currentPath = window.location.pathname.split("/").pop();
+					// Get all the nav links
+					const navLinks = document.querySelectorAll('.nav-link');
+					// Loop through each link and check if it matches the current path
+					navLinks.forEach(link => {
+						//  Get the href attribute value, normalize it
+						const linkPath = link.getAttribute("href").split("/").pop();
+						// Check if the linkPath matches the current path
+						if (linkPath === currentPath) {
+							// Add 'active' class to the matching link
+							link.classList.add('active');
+						}
+					});
 				});
 				// body
 
@@ -35,19 +50,8 @@
 			});
 		</script>
 
-		<!-- Header -->
-		<script>
-			// Load header.html into the header-container div
-			document.addEventListener('DOMContentLoaded', () => {
-            fetch('/sections/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-				});
-			});
-		</script>
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-		<script src="js/navbar.js"></script>
+		<script src="../js/navbar.js"></script>
 		<!-- <script>
 			const navbarId = document.getElementById('navbar-id');
 			navbarId.style.setProperty('background-color', 'rgba(255, 0, 0, 1)', 'important'); // Set desired color and transparency level

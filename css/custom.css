@@ -134,7 +134,7 @@ footer .row{
 
 .left-section-j {
     background-image: url(/images/body/L+O-20.jpg);
-    background-size: 100%;
+    background-size: cover;
     height: 100vh; /* Full viewport height */
     /* width: 50%; */
     flex: 1;
