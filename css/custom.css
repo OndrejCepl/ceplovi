@@ -5,17 +5,6 @@ body {
     background-color: #121212;
     color: whitesmoke;
 }
-#vtipy {
-    text-align: center;
-    align-items: center;
-    position: relative;
-    columns: 1;
-    max-width: 500px;
-    min-width: 200px;
-    margin: auto;
-    word-wrap: break-word;
-    
-}
 /* ====== Header ===== */
 #header {
     width: 100%;
@@ -127,34 +116,118 @@ footer .row{
 
 /* ====== Body ===== */
 .jumbotron {
-    background-image: url(/images/body/L+O-30.jpg);
-    background-size: cover;
     height: 100vh; /* Full viewport height */
-    color: white;
+    align-items: center;  
     position: relative;
-    overflow: hidden;
-    background-position:  center top;
-
+    overflow: hidden; 
+    display: flex;
+}
+.jumbotron p {
+    font-size: 2em;
+    text-wrap: pretty;
 }
 
+.jumbotron h2 {
+    font-size: 3em;
+    
+}
+
+.left-section-j {
+    background-image: url(/images/body/L+O-20.jpg);
+    background-size: 100%;
+    height: 100vh; /* Full viewport height */
+    /* width: 50%; */
+    flex: 1;
+    background-position: center top 25%;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.right-section-j {
+    flex: 1;
+    margin: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0 2rem 0 2rem;
+}
+
+
+#vtipy {
+    text-align: center;
+    align-items: center;
+    position: relative;
+    max-width: 1700px;
+    margin: auto;
+    word-wrap: break-word;
+    display: flex;
+}
+
+#vtipy div {
+    border: .1em solid gray;
+    min-width: 300px;
+    border-radius: .5em;
+    /* flex: 1; */
+    margin: 1em 1em 1em 1em;
+    display: table;
+}
+
+#vtipy p {
+    margin: .5em;
+}
 .content {
-    padding: 3em 3em 0 3em;
+    padding: 3em 3em 1em 3em;
 }
 /* ====== Body end ===== */
 
 /* *********** MEDIA ********** */
 @media (min-width: 992px) {
+    body {
+        font-size: 130%;
+    }
     /* ====== Header ===== */
     .fixed-buttons .btn-outline-light {
         display: block;
     }
     /* ====== Header end ===== */
+    #vtipy {
+        display: flex;
+    }
 }
 
 @media (max-width: 991.98px) {
     /* ====== Body ===== */
     body {
         margin-top: 46px;
+        font-size: 100%;
+    }
+
+    body .jumbotron {
+        font-size: 80%;
+    }
+    /* ====== Body end ===== */
+    /* ====== Header ===== */
+    .fixed-buttons .navbar-toggler {
+        display: block;
+    }
+
+    #navbar-right-div {
+        padding-top: 0.2em;
+    }
+    /* ====== Header end ===== */
+
+    #vtipy {
+        flex-direction: column;
+    }
+}
+
+@media (max-width: 767.98px){
+     /* ====== Body ===== */
+    body {
+        margin-top: 46px;
+    }
+    
+    body .jumbotron {
+        font-size: 80%;
     }
 
     /* ====== Body end ===== */
@@ -168,4 +241,3 @@ footer .row{
     }
     /* ====== Header end ===== */
 }
-

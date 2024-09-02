@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="cs">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Čeplovi</title>
+		<!-- Latest compiled and minified CSS -->
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+		<!--  custom styles  -->
+		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+		<link rel="stylesheet" href="/css/custom.css">
+	</head>
+	<body>
+		<div id="header-container"></div>
+		<div id="body-container"></div>
+		<div id="footer-container"></div>
+		<!-- ========= Load page sections ========= -->
+		<script>
+			// Load header.html into the header-container div
+			document.addEventListener('DOMContentLoaded', () => {
+				// header
+            fetch('/sections/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+				});
+				// body
+
+				// footer
+			fetch('/sections/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('footer-container').innerHTML = data;
+				});
+			});
+		</script>
+
+		<!-- Header -->
+		<script>
+			// Load header.html into the header-container div
+			document.addEventListener('DOMContentLoaded', () => {
+            fetch('/sections/header.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.getElementById('header-container').innerHTML = data;
+				});
+			});
+		</script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+		<script src="js/navbar.js"></script>
+		<!-- <script>
+			const navbarId = document.getElementById('navbar-id');
+			navbarId.style.setProperty('background-color', 'rgba(255, 0, 0, 1)', 'important'); // Set desired color and transparency level
+		</script> -->
+	</body>
+</html>
