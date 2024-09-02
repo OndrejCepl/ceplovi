@@ -1,0 +1,6 @@
+AuthUserFile /data/web/virtuals/279913/virtual/www/secret_ceplovi/.htpasswd
+AuthGroupFile /dev/null
+AuthType Basic
+AuthName "Restricted Area"
+Require valid-user
+Order deny,allow

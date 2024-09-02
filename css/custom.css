@@ -151,6 +151,11 @@ footer .row{
     padding: 0 2rem 0 2rem;
 }
 
+.inprogress {
+    align-items: center;
+    text-align: center;
+    margin-top: 4em;
+}
 
 #vtipy {
     text-align: center;
