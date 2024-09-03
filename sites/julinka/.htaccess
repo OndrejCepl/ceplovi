@@ -6,9 +6,5 @@ Require valid-user
 # Disable directory listing
 Options -Indexes
 
-<RequireAll>
-    Require all denied
-</RequireAll>
-
 # Redirect users who fail authentication to a home page
 ErrorDocument 401 /index.html
