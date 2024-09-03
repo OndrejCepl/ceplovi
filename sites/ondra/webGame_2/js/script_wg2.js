@@ -67,16 +67,16 @@ window.addEventListener('click', function(){
     const layer5 = new Layer(backgroundLayer5, .6);
     const gameObjects = [layer1, layer2, layer3, layer4, layer5];
 
-    function animate() {
+    function animate2() {
         ctx_2.clearRect(0,0,CANVAS_WIDTH_2, CANVAS_HEIGHT_2)
         gameObjects.forEach(object => {
             object.update();
             object.draw();
         });
         // gameFrame--;
-        requestAnimationFrame(animate);
+        requestAnimationFrame(animate2);
     };
-    animate()
+    animate2()
 });
 
 

@@ -93,14 +93,14 @@ slider3.addEventListener('change', function(e){
     }
 });
 
-function animate(){
+function animate3(){
     ctx3.clearRect(0,0,CANVAS_WIDTH_3, CANVAS_HEIGHT_3);
     enemiesArray.forEach(enemy => {
         enemy.updateCoordinates();
         enemy.draw();
     });
     gameFrame_3++;
-    requestAnimationFrame(animate);
+    requestAnimationFrame(animate3);
 
 }
-animate();
+animate3();
