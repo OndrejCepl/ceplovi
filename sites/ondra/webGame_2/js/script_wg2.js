@@ -31,7 +31,6 @@ window.addEventListener('click', function(){
     slider.addEventListener('change', function(e){
         gameSpeed = e.target.value;
         showGameSpeed.innerHTML = e.target.value;
-        console.log(gameSpeed);
     })
 
     class Layer {

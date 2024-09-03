@@ -75,7 +75,7 @@ class Enemy {
 
 const slider3 = document.getElementById('slider3');
 numberOfEnemies = slider3.value;
-console.log(numberOfEnemies);
+// console.log(numberOfEnemies);
 const showNumberOfNpcs3 = document.getElementById('showNumberOfNpcs3');
 showNumberOfNpcs3.innerHTML = slider3.value;
 
@@ -86,14 +86,13 @@ for (let i = 0; i < numberOfEnemies; i++){
 slider3.addEventListener('change', function(e){
     numberOfEnemies = e.target.value;
     showNumberOfNpcs3.innerHTML = e.target.value;
-    console.log(numberOfEnemies);
+    // console.log(numberOfEnemies);
     enemiesArray = [];
     for (let i = 0; i < numberOfEnemies; i++){
         enemiesArray.push(new Enemy());
     }
 });
 
-console.log(enemiesArray);
 function animate(){
     ctx3.clearRect(0,0,CANVAS_WIDTH_3, CANVAS_HEIGHT_3);
     enemiesArray.forEach(enemy => {

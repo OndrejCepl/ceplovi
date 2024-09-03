@@ -1,5 +1,5 @@
 let playerState1 = 'idle';
-const dropdown1 = document.getElementById('animations');
+const dropdown1 = document.getElementById('animations1');
 dropdown1.addEventListener('change', function(e){
     playerState1 = e.target.value;
 })
