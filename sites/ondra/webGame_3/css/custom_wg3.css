@@ -1,0 +1,33 @@
+#canvas3 {
+    border: .3em solid gray;
+    background-color: whitesmoke;
+    position:relative;
+    top: 50%;
+    /* left: 50%; */
+    /* transform: translate(-50%, 10%); */
+    width: 80vw;
+    max-width: 600px;
+    height: width;
+    max-height: 1200px;
+}
+
+#webGame_3 {
+    align-items: center;
+    text-align: center;
+    margin-top: 4em;
+}
+
+#slider3 {
+    width: 80vw;
+    max-width: 600px;
+}
+
+#container3 {
+    position: relative;
+    /* width: 800px; */
+    /* transform: translate(-50%, -50%); */
+    /* top: 50%; */
+    /* left: 50%; */
+    /* border: 3px solid white; */
+    font-size: 25px;
+}
