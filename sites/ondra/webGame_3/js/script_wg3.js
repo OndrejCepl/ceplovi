@@ -93,8 +93,6 @@ slider3.addEventListener('change', function(e){
     }
 });
 
-
-
 console.log(enemiesArray);
 function animate(){
     ctx3.clearRect(0,0,CANVAS_WIDTH_3, CANVAS_HEIGHT_3);
