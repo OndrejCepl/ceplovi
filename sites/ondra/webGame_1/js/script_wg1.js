@@ -5,7 +5,7 @@ dropdown.addEventListener('change', function(e){
 })
 
 const canvas = document.getElementById("canvas1");
-const ctx = canvas.getContext('2d');
+const ctx_1 = canvas.getContext('2d');
 
 // set proper width and height of the window
 const CANVAS_WIDTH = canvas.width = 600;
@@ -13,7 +13,7 @@ const CANVAS_HEIGHT = canvas.height = 600;
 
 const playerImage = new Image();
 playerImage.src = "./webGame_1/images/shadow_dog.png";
-console.log(playerImage);
+// console.log(playerImage);
 const spriteWidth = 575;
 const spriteHeight = 523;
 
@@ -76,14 +76,14 @@ animationStates.forEach((state, index) => {
     }
     spriteAnimations[state.name] = frames;
 });
-console.log(spriteAnimations);
+// console.log(spriteAnimations);
 
 function animate(){
-    ctx.clearRect(0,0,CANVAS_WIDTH, CANVAS_HEIGHT);
+    ctx_1.clearRect(0,0,CANVAS_WIDTH, CANVAS_HEIGHT);
     let position = Math.floor(gameFrame/staggerFrames) % spriteAnimations[playerState].loc.length;
     frameX = spriteWidth * position;
     frameY = spriteAnimations[playerState].loc[position].y;
-    ctx.drawImage(playerImage, frameX, frameY, 
+    ctx_1.drawImage(playerImage, frameX, frameY, 
         spriteWidth, spriteHeight, 0, 0, spriteWidth, spriteHeight);
     // if (gameFrame % staggerFrames  == 0){
     //     if (frameX < 6) frameX++;
