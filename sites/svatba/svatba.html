@@ -10,21 +10,18 @@
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 		<link rel="stylesheet" href="../../css/custom.css">
 	</head>
+	<!-- ========== header ========== -->
 	<header id="header-container" class="fixed-top"></header>
-	<body>
-		<div class="inprogress"> Stránka se připravuje </div>
-		<!-- ========= Load page sections ========= -->
-		<script>
+	<script>
+		document.addEventListener('DOMContentLoaded', () => {
 			// Load header.html into the header-container div
-			document.addEventListener('DOMContentLoaded', () => {
-			// header
-            fetch('/sections/header.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('header-container').innerHTML = data;
-                    
-                    /* Highlight the active section */
-                    const currentPath = window.location.pathname.split("/").pop();
+			fetch('/sections/header.html')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('header-container').innerHTML = data;
+
+					/* Highlight the active section */
+					const currentPath = window.location.pathname.split("/").pop();
 					// Get all the nav links
 					const navLinks = document.querySelectorAll('.nav-link');
 					// Loop through each link and check if it matches the current path
@@ -38,15 +35,20 @@
 						}
 					});
 				});
-			// body
-			// footer
-			fetch('/sections/footer.html')
-                .then(response => response.text())
-                .then(data => {
-                    document.getElementById('footer-container').innerHTML = data;
-				});
 			});
+	</script>
+	<!-- ========== Body ========== -->
+	<body>
+		<div class="inprogress"> Stránka se připravuje </div>
+		<!-- ========= Load page sections ========= 
+		<script>
+			fetch('/sections/body.html')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('body-container').innerHTML = data;
+				});
 		</script>
+		-->
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 		<script src="../../js/navbar.js"></script>
@@ -55,5 +57,13 @@
 			navbarId.style.setProperty('background-color', 'rgba(255, 0, 0, 1)', 'important'); // Set desired color and transparency level
 		</script> -->
 	</body>
+	<!-- ========== footer ========== -->
 	<footer id="footer-container" class="d-flex flex-wrap justify-content-between"></footer>
+	<script>
+	fetch('/sections/footer.html')
+		.then(response => response.text())
+		.then(data => {
+			document.getElementById('footer-container').innerHTML = data;
+		});
+	</script>
 </html>

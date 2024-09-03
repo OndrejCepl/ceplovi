@@ -1,5 +1,5 @@
 #canvas1 {
-    border: 5px solid black;
+    border: 5px solid white;
     position:absolute;
     top: 50%;
     left: 50%;
@@ -20,5 +20,3 @@
     font-size: 25px;
     text-align: center;
 }
-
-.
