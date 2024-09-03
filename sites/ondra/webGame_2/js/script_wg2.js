@@ -2,7 +2,7 @@ const canvas_2 = document.getElementById('canvas2');
 const ctx_2 = canvas_2.getContext('2d');
 const CANVAS_WIDTH_2 = canvas_2.width = 800;
 const CANVAS_HEIGHT_2 = canvas_2.height = 700;
-let gameSpeed = 20;
+let gameSpeed = 40;
 // let gameFrame = 0;
 
 const backgroundLayer1 = new Image();
@@ -25,12 +25,13 @@ ctx_2.fillText('Click to start', CANVAS_WIDTH_2/2 - text_click.width/2, CANVAS_H
 ctx_2.textAlign = 'center';
 window.addEventListener('click', function(){
     const slider = document.getElementById('slider');
-    slider.value = gameSpeed;
+    gameSpeed = slider.value;
     const showGameSpeed = document.getElementById('showGameSpeed');
-    showGameSpeed.innerHTML = gameSpeed;
+    showGameSpeed.innerHTML = slider.value;
     slider.addEventListener('change', function(e){
         gameSpeed = e.target.value;
         showGameSpeed.innerHTML = e.target.value;
+        console.log(gameSpeed);
     })
 
     class Layer {
