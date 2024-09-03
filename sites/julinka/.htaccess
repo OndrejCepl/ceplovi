@@ -1,0 +1,6 @@
+AuthUserFile /data/web/virtuals/279913/virtual/www/secret/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Restricted Area"
+AuthType Basic
+Require valid-user
+Order deny, allow
