@@ -9,6 +9,7 @@
 		<!--  custom styles  -->
 		<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
 		<link rel="stylesheet" href="../../css/custom.css">
+		<link rel="stylesheet" href="../ondra/css/project.css">
 		
 	</head>
 	<!-- ========== header ========== -->
@@ -41,7 +42,7 @@
 	<!-- ========== Body ========== -->
 	<body>
 		<!-- ========== Web game 1: sprite animation ========== -->
-		<div id="webGame_1" class="justify-content-center flex"></div></div>
+		<div id="webGame_1" class="justify-content-center flex gameContainer"></div>
 		<script>
 			fetch('../ondra/webGame_1/wg1.html')
 				.then(response => response.text())
@@ -60,7 +61,7 @@
 			});
 		</script>
 		<!-- ========== Web game 2: Parallax Backgrounds ========== -->
-		<div id="webGame_2" class="justify-content-center flex"></div></div>
+		<div id="webGame_2" class="justify-content-center flex gameContainer"></div>
 		<script>
 			fetch('../ondra/webGame_2/wg2.html')
 				.then(response => response.text())
@@ -81,7 +82,7 @@
 		</script>
 		
 		<!-- ========== Web game 3: Enemy movement ========== -->
-		<div id="webGame_3" class="justify-content-center flex"></div>
+		<div id="webGame_3" class="justify-content-center flex gameContainer"></div>
 		<script>
 			fetch('../ondra/webGame_3/wg3.html')
 				.then(response => response.text())
@@ -100,7 +101,28 @@
 					document.body.appendChild(script3);
 				});
 		</script>
-		
+
+		<!-- ========== Web game 3: Enemy movement ========== -->
+		<div id="webGame_4" class="justify-content-center flex gameContainer"></div>
+		<script>
+			fetch('../ondra/webGame_4/wg4.html')
+				.then(response => response.text())
+				.then(data => {
+					document.getElementById('webGame_4').innerHTML = data;
+					// Load the JS script 
+					const script4 = document.createElement('script');
+					script4.src = "../ondra/webGame_4/js/script_wg4.js";
+					script4.onload = () => {
+						console.log('JavaScript file 4 loaded');
+
+					};
+					script4.onerror = (error) => {
+						console.error('Error loading JavaScript file:', error);
+					};
+					document.body.appendChild(script4);
+				});
+		</script>
+
 
 		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 		<script src="../../js/navbar.js"></script>

@@ -1,17 +1,12 @@
-#canvas3 {
+#canvas4 {
     border: .3em solid gray;
-    background-color: whitesmoke;
-    position:relative;
+    background-color: black;
+    position: relative;
     top: 50%;
     /* left: 50%; */
     /* transform: translate(-50%, 10%); */
     width: 80vw;
     max-width: 600px;
     height: width;
-    max-height: 1200px;
-}
-
-#slider3 {
-    width: 80vw;
-    max-width: 600px;
+    max-height: 600px;
 }
