@@ -2,6 +2,14 @@ const canvas4 = document.getElementById('canvas4');
 const ctx4 = canvas4.getContext('2d');
 canvas4.width = 600;
 canvas4.height = 600;
+
+let playerState4 = 'click4';
+const dropdown4 = document.getElementById('animations4');
+dropdown4.addEventListener('change', function(drop4){
+    playerState4 = drop4.target.value;
+});
+
+
 // CANVAS_WIDTH_4 = canvas4.width = 600;
 // CANVAS_HEIGHT_4 = canvas4.height = 600;
 
