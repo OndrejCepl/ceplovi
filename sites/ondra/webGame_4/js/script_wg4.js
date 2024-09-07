@@ -3,10 +3,12 @@ const ctx4 = canvas4.getContext('2d');
 canvas4.width = 600;
 canvas4.height = 600;
 
-let playerState4 = 'click4';
+let playerState4 = 'click';
 const dropdown4 = document.getElementById('animations4');
 dropdown4.addEventListener('change', function(drop4){
     playerState4 = drop4.target.value;
+    console.log(playerState4);
+    
 });
 
 
@@ -35,7 +37,7 @@ class Explosion{
     }
 
     update(){
-        if (this.frame === 0) this.sound.play();
+        if (this.frame === 0 && playerState4 === 'click') this.sound.play();
         this.timer++;
         if (this.timer % 10 === 0){
             this.frame++;
@@ -52,9 +54,10 @@ class Explosion{
         ctx4.restore();
     }
 }
-window.addEventListener('click', function(e4){
+
+
+window.addEventListener(playerState4, function(e4){
     createAnimation4(e4);
-    console.log(e4);
 });
 
 // window.addEventListener('mousemove', function(e4){
@@ -63,12 +66,25 @@ window.addEventListener('click', function(e4){
 // });
 
 function createAnimation4(e4) {
-    let positionX4 = e4.x - canvasPosition4.left;
-    let positionY4 = e4.y - window.scrollY + canvasPosition4.top;
-    console.log(e4.x, e4.y, canvasPosition4.left, canvasPosition4.top, window.scrollY);
-    console.log(positionX4, positionY4);
-    explosions4.push(new Explosion(positionX4, positionY4));
-}
+    const position4 = getClickPosition4(e4, canvas4);
+    console.log(position4.relX);
+    console.log(`Position x and y: ${e4.x}, ${e4.y} \n 
+        Canvas Position left and top: ${canvasPosition4.left}, ${canvasPosition4.top}\n
+        Scroll position x and y: ${window.scrollX}, ${window.scrollY}\n
+        Final position x and y: ${position4.relX}, ${position4.relY}`);
+    explosions4.push(new Explosion(position4.relX, position4.relY));
+};
+
+function getClickPosition4(e4, canvas4) {
+    canvasPosition4 = canvas4.getBoundingClientRect(); // get canvas position and size
+    let scaleX = canvas4.width / canvasPosition4.width;
+    let scaleY = canvas4.height / canvasPosition4.height;
+
+    const relX = Math.round((e4.clientX - canvasPosition4.left) * scaleX);
+    const relY = Math.round((e4.clientY - canvasPosition4.top) * scaleY);
+    console.log(`calculated positions: ${relX}, ${relY}`);
+    return {relX: relX, relY: relY};
+};
 
 function animate4() {
     ctx4.clearRect(0, 0, canvas4.width, canvas4.height);
