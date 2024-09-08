@@ -43,11 +43,13 @@ class Explosion{
     }
 
     update(){
-        if (this.frame === 0 && playerState4 === 'click') this.sound.play();
+        if (this.frame === 0 && playerState4 === 'click' && 
+            0 < this.x && this.x <= 600 &&
+            this.y > 0 && this.y <= 600) this.sound.play();
         this.timer++;
         if (this.timer % 10 === 0){
             this.frame++;
-        }
+        };
 
     }
     draw(){
@@ -87,7 +89,7 @@ function getClickPosition4(e4, canvas4) {
 function animate4() {
     ctx4.clearRect(0, 0, canvas4.width, canvas4.height);
     for (let i = 0; i < explosions4.length; i++){
-        explosions4[i].update();
+        explosions4[i].update(this.x, this.y);
         explosions4[i].draw();
         // if the whole animation was played --> splice it
         if (explosions4[i].frame > 5) {
