@@ -4,17 +4,23 @@ canvas4.width = 600;
 canvas4.height = 600;
 
 let playerState4 = 'click';
+let oldPlayerState4 = playerState4;
 const dropdown4 = document.getElementById('animations4');
+
 dropdown4.addEventListener('change', function(drop4){
     playerState4 = drop4.target.value;
-    console.log(playerState4);
-    
+    updateEventListener4(playerState4);
 });
 
-
-// CANVAS_WIDTH_4 = canvas4.width = 600;
-// CANVAS_HEIGHT_4 = canvas4.height = 600;
-
+function updateEventListener4(playerState4) {
+    // Remove any previous listeners to avoid duplicates
+    window.removeEventListener(oldPlayerState4, createAnimation4);
+    // Add the new event listener based on the selected event type
+    window.addEventListener(playerState4, createAnimation4);
+    oldPlayerState4 = playerState4;
+    console.log(`Player state: ${playerState4}\n
+        Old Player state: ${oldPlayerState4}`);
+};
 const explosions4 = [];
 let canvasPosition4 = canvas4.getBoundingClientRect();
 
@@ -55,23 +61,15 @@ class Explosion{
     }
 }
 
-
-window.addEventListener(playerState4, function(e4){
-    createAnimation4(e4);
-});
-
-// window.addEventListener('mousemove', function(e4){
-//     createAnimation4(e4);
-//     console.log(e4);
-// });
+window.addEventListener(playerState4, createAnimation4);
 
 function createAnimation4(e4) {
     const position4 = getClickPosition4(e4, canvas4);
-    console.log(position4.relX);
-    console.log(`Position x and y: ${e4.x}, ${e4.y} \n 
-        Canvas Position left and top: ${canvasPosition4.left}, ${canvasPosition4.top}\n
-        Scroll position x and y: ${window.scrollX}, ${window.scrollY}\n
-        Final position x and y: ${position4.relX}, ${position4.relY}`);
+    // console.log(position4.relX);
+    // console.log(`Position x and y: ${e4.x}, ${e4.y} \n 
+    //     Canvas Position left and top: ${canvasPosition4.left}, ${canvasPosition4.top}\n
+    //     Scroll position x and y: ${window.scrollX}, ${window.scrollY}\n
+    //     Final position x and y: ${position4.relX}, ${position4.relY}`);
     explosions4.push(new Explosion(position4.relX, position4.relY));
 };
 
@@ -82,7 +80,7 @@ function getClickPosition4(e4, canvas4) {
 
     const relX = Math.round((e4.clientX - canvasPosition4.left) * scaleX);
     const relY = Math.round((e4.clientY - canvasPosition4.top) * scaleY);
-    console.log(`calculated positions: ${relX}, ${relY}`);
+    // console.log(`calculated positions: ${relX}, ${relY}`);
     return {relX: relX, relY: relY};
 };
 
