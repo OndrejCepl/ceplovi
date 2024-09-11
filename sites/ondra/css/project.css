@@ -6,10 +6,30 @@
     /* left: 50%; */
     /* border: 3px solid white; */
     font-size: 25px;
+    /* margin-left: 10vw; */
 }
 
 .gameContainer {
     align-items: center;
     text-align: center;
     margin-top: 4em;
+}
+
+.about {
+    align-items: center;
+    text-align: justify;
+    margin: 4em 10vw 0 10vw;
+}
+
+.about span {
+    justify-content: center;
+    text-justify: center;
+    justify-items: center;
+    margin: auto;
+}
+
+@media (min-width: 1199.99px) {
+    .about {
+        margin: 4em 20vw 0 20vw;
+    }
 }
