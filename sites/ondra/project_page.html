@@ -42,12 +42,29 @@
 	<!-- ========== Body ========== -->
 	<body>
 		<!-- INTRO -->
-		<div  class="about flex"><p>
-			<span class="justify-text-center">Hello, </span><br>my name is Ondřej Čepl. 
+		<div  class="about flex">
+			<div class="justify-text-center">Hello, </div>
+			<p>my name is Ondřej Čepl. 
 			I am a graduate in Fluid Engineering with a strong passion for technology and innovation. My interests span across several fields, including Python coding, data and image processing, software development and artificial intelligence. I enjoy leveraging my engineering background and programming skills to solve complex problems, automate processes, and create intelligent systems. I'm always excited to learn, experiment, and build new solutions in the ever-evolving tech landscape.
 			</p>
 			<hr style="height:2px;border-width:0;color:gray;background-color:gray">
-			
+			<div>
+				<div class="justify-text-center">About This Website </div>
+				<p>
+					In my professional work, I frequently use Python for data and image processing, automating workflows, interacting with APIs, and developing pre- and post-processing functions to enhance both efficiency and clarity. I’ve also modified a C++ module to customize functionality within the Rocky API solver.
+					<br>
+					Although Python is a key part of my skill set, I’ve been exploring web development to broaden my expertise. This website highlights my work with HTML, CSS, and JavaScript.  Here, you can explore my projects and find their source code on my <a style="text-decoration: none; color: aqua;" href="https://github.com/OndrejCepl">GitHub</a>. I hope this site demonstrates my ability to continuously grow and adapt in both programming and technology.
+					<br>
+					The descriptions of all the showcased projects are presented below.
+				</p>
+			</div>
+			<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+			<div>
+				<div class="justify-text-center"><h3>Sprite animation</h3> </div>
+				<p>
+					In the first project, a simple sprite animation is displayed in a canvas window. The animation consists of multiple states, which can be selected using a dropdown menu. All the animations are derived from a single sprite sheet, and based on the selected state, the appropriate line of frames is extracted and displayed. The state and frame details are managed through an object that defines the number of frames and the position of each animation, ensuring smooth transitions between states.
+				</p>
+			</div>
 		</div>
 		
 
@@ -71,6 +88,15 @@
 			});
 		</script>
 		<!-- ========== Web game 2: Parallax Backgrounds ========== -->
+		<div  class="about flex">
+			<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+			<div class="justify-text-center"><h3>Parallax backgrounds</h3> </div>
+			<div>
+				<p>
+					Second showcase demonstrates a parallax background effect using five distinct layers, each moving at a different speed. The varying speeds of the layers create a convincing 3D effect, adding depth to the scene. Each layer is represented by an object with a unique image and horizontal speed, and to ensure smooth transitions, two moving images are used for each layer. Additionally, a slider allows you to adjust the speed of the backgrounds, giving you control over the parallax effect.
+				</p>
+			</div>
+		</div>
 		<div id="webGame_2" class="justify-content-center flex gameContainer"></div>
 		<script>
 			fetch('../ondra/webGame_2/wg2.html')
@@ -92,6 +118,15 @@
 		</script>
 		
 		<!-- ========== Web game 3: Enemy movement ========== -->
+		<div  class="about flex">
+			<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+			<div class="justify-text-center"><h3>NPC movement animation</h3> </div>
+			<div>
+				<p>
+					This project demonstrates NPC (non-player character) movement using instances of an <em>Enemy</em> object, all derived from a single image. The animation technique is similar to the one used in the sprite animation showcase. NPC positions are updated using a random function from the Math library, and movement is restricted to prevent NPCs from going beyond the borders. While all NPCs are identical in this example, the setup can be modified to incorporate different enemy types and movement patterns in the future. A slider at the bottom controls the number of NPCs, ranging from 0 to 30. Adjusting the slider deletes old instances, creates new ones, and recalculates their starting positions, offering a dynamic and interactive simulation.
+				</p>
+			</div>
+		</div>
 		<div id="webGame_3" class="justify-content-center flex gameContainer"></div>
 		<script>
 			fetch('../ondra/webGame_3/wg3.html')
@@ -112,7 +147,18 @@
 				});
 		</script>
 
-		<!-- ========== Web game 3: Enemy movement ========== -->
+		<!-- ========== Web game 4: Playing animations on trigger ========== -->
+		<div  class="about flex">
+			<hr style="height:2px;border-width:0;color:gray;background-color:gray">
+			<div class="justify-text-center"><h3>Playing animations on trigger</h3> </div>
+			<div>
+				<p>
+					This project showcases triggered animations with sound effects. When you click, an explosion animation is displayed in the canvas window, accompanied by a sound effect. Each click generates a new instance of the explosion object, with the starting angle randomized to ensure that every explosion appears unique. A dropdown menu allows you to choose between two triggers: <em>click</em> or <em>mouse move</em>.
+					<br>
+					When <em>click</em> is selected, each click triggers both the explosion animation in the canvas window and the sound effect. If <em>mouse move</em> is selected, new explosion instances are created as you move the mouse within the canvas area, but without any sound effects. The mousemove option is available only on PC
+				</p>
+			</div>
+		</div>
 		<div id="webGame_4" class="justify-content-center flex gameContainer"></div>
 		<script>
 			fetch('../ondra/webGame_4/wg4.html')

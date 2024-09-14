@@ -1,3 +1,6 @@
+body{
+    margin-top: 4em;
+}
 .container {
     position: relative;
     /* width: 800px; */
@@ -5,31 +8,41 @@
     /* top: 50%; */
     /* left: 50%; */
     /* border: 3px solid white; */
-    font-size: 25px;
+    font-size: 130%;
     /* margin-left: 10vw; */
 }
 
 .gameContainer {
     align-items: center;
     text-align: center;
-    margin-top: 4em;
+    /* margin-top: 4em; */
 }
 
 .about {
     align-items: center;
     text-align: justify;
-    margin: 4em 10vw 0 10vw;
+    margin: 1em 10vw 0 10vw;
+    font-size: 130%;
 }
 
-.about span {
+.about div {
     justify-content: center;
-    text-justify: center;
     justify-items: center;
-    margin: auto;
+}
+
+.about div p em {
+    background-color: rgb(40, 40, 40);
+    border-radius: 10% 10% 10% 10%;
+}
+
+.justify-text-center {
+    text-align: center;
+    font-weight: 500;
+    margin-bottom: .5em;
 }
 
 @media (min-width: 1199.99px) {
     .about {
-        margin: 4em 20vw 0 20vw;
+        margin: 1em 20vw 0 20vw;
     }
 }
