@@ -1,4 +1,3 @@
-
 window.addEventListener('scroll', function() {
     /* transition of the navbar */
     const navbar = document.querySelector('.navbar');

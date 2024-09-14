@@ -167,7 +167,7 @@ footer .row{
     display: flex;
 }
 
-#vtipy div {
+#vtipy .div-with-border {
     border: .1em solid gray;
     min-width: 300px;
     border-radius: .5em;
